@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ManualAddActivity">
+
+    <ImageView
+        android:id="@+id/imageViewURL"
+        android:layout_width="180dp"
+        android:layout_height="230dp"
+        android:scaleType="fitCenter" />
+
+    <ImageButton
+        android:id="@+id/imageButtonShare"
+        android:layout_width="40dp"
+        android:onClick="imageButtonShare_onClick"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:background="@android:drawable/ic_menu_share"
+        android:layout_below="@+id/imageViewURL"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subject"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageViewURL"
+        android:layout_toEndOf="@+id/imageViewURL" />
+    <EditText
+        android:id="@+id/editTextSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="6"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/body"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editTextGenre"
+        android:layout_toRightOf="@+id/imageViewURL"
+        android:layout_toEndOf="@+id/imageViewURL" />
+    <EditText
+        android:id="@+id/editTextBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+
+    <EditText
+        android:id="@+id/editTextGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/genre"
+        android:layout_below="@+id/editTextSubject"
+        android:layout_toRightOf="@+id/imageViewURL"
+        android:layout_toEndOf="@+id/imageViewURL" />
+
+
+    <EditText
+        android:id="@+id/editTextURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/url"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_alignBottom="@+id/imageViewURL"
+        android:layout_toLeftOf="@+id/buttonShowImage"
+        android:layout_toRightOf="@+id/imageViewURL"
+        android:layout_toEndOf="@+id/imageViewURL" />
+
+
+    <Button
+        android:id="@+id/buttonShowImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonShowImage_onClick"
+        android:text="@string/show"
+        android:textSize="20sp"
+        android:layout_below="@+id/editTextURL"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#000000"
+        android:textColor="#6aade8" />
+
+
+    <EditText
+        android:id="@+id/editTextYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/year"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_below="@+id/imageButtonShare"
+        android:layout_alignLeft="@+id/editTextURL"
+        android:layout_alignStart="@+id/editTextURL" />
+
+
+    <EditText
+        android:id="@+id/editTextRunTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/runTime"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_below="@+id/imageButtonShare"
+        android:layout_alignLeft="@+id/editTextSubject"
+        android:layout_alignStart="@+id/editTextSubject" />
+
+    <CheckBox
+        android:id="@+id/checkBoxWatched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/watch"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/buttonShowImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:numStars="10"
+        android:rating="3.5"
+        android:stepSize="0.1"
+        android:mirrorForRtl="false"
+        android:layout_below="@+id/editTextYear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/TextViewRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:hint="@string/rating"
+        android:textColorHint="#ffffff"
+        android:layout_alignBottom="@+id/checkBoxWatched"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonCancel_onClick"
+        android:text="@string/cancel"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/TextViewRate"
+        android:layout_toEndOf="@+id/TextViewRate"
+        android:background="#000000"
+        android:textColor="#6aade8" />
+
+
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonOK_onClick"
+        android:text="@string/ok"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/buttonCancel"
+        android:layout_toLeftOf="@+id/TextViewRate"
+        android:layout_toStartOf="@+id/TextViewRate"
+        android:background="#000000"
+        android:textColor="#6aade8" />
+
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="subject">Subject:</string>
+    <string name="body">Body:</string>
+    <string name="url">URL</string>
+    <string name="show">Show</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="myMovie">My Movies</string>
+    <string name="watch">Watched</string>
+    <string name="year">Year</string>
+    <string name="runTime">Run time</string>
+    <string name="rating">Rating</string>
+    <string name="genre">Genre</string>
+</resources>
